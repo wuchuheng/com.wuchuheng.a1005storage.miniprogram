@@ -1,32 +1,25 @@
-import { Component, PropsWithChildren } from 'react'
-import { View, Text } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import React, { useState } from "react";
+import Taro from "@tarojs/taro";
+import { View } from "@tarojs/components";
+import "taro-ui/dist/style/components/button.scss"; // 按需引入
+import "./index.less";
+import MainLayout, { TabItemType } from "../../layout/mainLayout/MainLauout";
+import { IconName } from "../../components/Icons/Icons";
+import HomePage from "../HomePage/HomePage";
 
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import './index.less'
+const Index: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const tabs: TabItemType[] = [
+    { content: <HomePage />, name: "主页", icon: IconName.HOME },
+    { content: <View>orders</View>, name: "清单", icon: IconName.ORDER },
+    { content: <View>menu</View>, name: "汇总", icon: IconName.MENU },
+  ];
+  const onChange = (newIndex: number) => {
+    setActiveIndex(newIndex);
+    Taro.setNavigationBarTitle({ title: tabs[newIndex].name });
+  };
 
-export default class Index extends Component<PropsWithChildren> {
+  return <MainLayout tabs={tabs} index={activeIndex} onChange={onChange} />;
+};
 
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  render () {
-    return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-        <AtButton type='primary'>I need Taro UI</AtButton>
-        <Text>Taro UI 支持 Vue 了吗？</Text>
-        <AtButton type='primary' circle={true}>支持</AtButton>
-        <Text>共建？</Text>
-        <AtButton type='secondary' circle={true}>来</AtButton>
-      </View>
-    )
-  }
-}
+export default Index;
