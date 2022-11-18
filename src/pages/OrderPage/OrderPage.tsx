@@ -7,51 +7,116 @@
  */
 import React from "react";
 import { View } from "@tarojs/components";
+import style from "./index.module.less";
+import OrderCard from "./OrderCard/OrderCard";
+import TopTip from "../../components/TopTip/TopTip";
 
 const OrderPage: React.FC = () => {
   return (
-    <>
-      <View>1</View>
-      <View>1</View>
-      <View>2</View>
-      <View>3</View>
-      <View>4</View>
-      <View>5</View>
-      <View>6</View>
-      <View>7</View>
-      <View>8</View>
-      <View>9</View>
-      <View>10</View>
-      <View>11</View>
-      <View>12</View>
-      <View>13</View>
-      <View>14</View>
-      <View>15</View>
-      <View>16</View>
-      <View>17</View>
-      <View>18</View>
-      <View>19</View>
-      <View>1</View>
-      <View>1</View>
-      <View>2</View>
-      <View>3</View>
-      <View>4</View>
-      <View>5</View>
-      <View>6</View>
-      <View>7</View>
-      <View>8</View>
-      <View>9</View>
-      <View>10</View>
-      <View>11</View>
-      <View>12</View>
-      <View>13</View>
-      <View>14</View>
-      <View>15</View>
-      <View>16</View>
-      <View>17</View>
-      <View>18</View>
-      <View>19</View>
-    </>
+    <View className={style.main}>
+      <TopTip />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+      <OrderCard />
+    </View>
   );
 };
 

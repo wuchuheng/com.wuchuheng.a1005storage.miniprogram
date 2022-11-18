@@ -9,11 +9,12 @@ import React from "react";
 import { View } from "@tarojs/components";
 import GoodsCard from "./GoodsCar/GoodsCard";
 import style from "./index.module.less";
+import TopTip from "../../components/TopTip/TopTip";
 
 const GoodsPage: React.FC = () => {
   return (
     <View className={style.main}>
-      <View className={style.topTip}>-- 到顶了 --</View>
+      <TopTip />
       <GoodsCard />
       <GoodsCard />
       <GoodsCard />
