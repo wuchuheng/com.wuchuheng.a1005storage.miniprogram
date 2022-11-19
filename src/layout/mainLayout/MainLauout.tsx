@@ -32,7 +32,12 @@ const MainLayout: React.FC<MainLayoutPropertyType> = ({
       <View className={style.main}>
         <View className={style.tabContent}>{tabs[index].content}</View>
 
-        <View className={style.tabBar}>
+        <View
+          className={style.tabBar}
+          style={{
+            gridTemplateColumns: `repeat(${tabs.length}, 1fr)`,
+          }}
+        >
           {tabs.map((item, i) => (
             <View
               onClick={() => onChange(i)}

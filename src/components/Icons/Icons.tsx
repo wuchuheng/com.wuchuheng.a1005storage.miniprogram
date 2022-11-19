@@ -15,6 +15,7 @@ enum IconName {
   ICON_OUT_OF_STORAGE = "out-of-storage",
   ICON_INBOUND = "inbound",
   RIGHT = "right",
+  ANALYSIS = "analysis",
 }
 const Icons: React.FC<{
   name: IconName;
