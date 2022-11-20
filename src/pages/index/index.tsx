@@ -10,7 +10,7 @@ import GoodsPage from "../GoodsPage/GoodsPage";
 import AnalysisPage from "../AnalysisPage/AnalysisPage";
 
 const Index: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(3);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const tabs: TabItemType[] = [
     { content: <HomePage />, name: "主页", icon: IconName.HOME },
     { content: <GoodsPage />, name: "货物", icon: IconName.MENU },

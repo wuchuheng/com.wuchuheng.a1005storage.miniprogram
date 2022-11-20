@@ -1,0 +1,80 @@
+@numberInputWidth: 30%;
+@inputHeight: 1.7rem;
+.inputStyle {
+  border: solid grey 1px;
+  margin-left: .5rem;
+}
+
+.inputBorderRadiusStyle {
+  border-radius: 10px;
+}
+
+.main {
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tip {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+  }
+  .formWrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: .5rem;
+    margin-top: 1rem;
+    .formItemWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    position: relative;
+  }
+}
+.input {
+  &:extend(.inputStyle);
+  height: @inputHeight;
+  width: 100%;
+  &:extend(.inputBorderRadiusStyle);
+}
+.inputWrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.numberInput {
+  height: @inputHeight;
+  &:extend(.inputStyle);
+  width: @numberInputWidth;
+  &:extend(.inputBorderRadiusStyle);
+}
+.buttonsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100% - @numberInputWidth;
+  .button {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+  }
+}
+.actionButtonsWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  @width: 5rem;
+  .confirmButton {
+    width: @width;
+    color: white;
+  }
+  .cancelButton {
+    width: @width;
+    background: white;
+    border: gray solid 1px;
+  }
+}

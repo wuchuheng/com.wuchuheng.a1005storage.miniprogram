@@ -15,7 +15,7 @@ type TimeFilterProps = {
   className?: string;
 };
 const TimeFilter: React.FC<TimeFilterProps> = (props) => {
-  const [isShow, setIsShow] = useState<boolean>(true);
+  const [isShow, setIsShow] = useState<boolean>(false);
 
   return (
     <>
