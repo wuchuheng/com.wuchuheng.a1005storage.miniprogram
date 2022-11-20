@@ -7,22 +7,14 @@
  */
 import React from "react";
 import { Canvas, View } from "@tarojs/components";
-import Taro, { useReady } from "@tarojs/taro";
-import { code128 } from "../../../../utils/barcode";
+import { useReady } from "@tarojs/taro";
+import wxbarcode from "wxbarcode";
 import style from "./style.module.less";
 
 const BarcodeRender: React.FC<{ barcode: string }> = ({ barcode }) => {
   const barcodeCanvasId = "barcode";
-  const convert_length = (length: number) => {
-    return Math.round((Taro.getSystemInfoSync().windowWidth * length) / 750);
-  };
   useReady(() => {
-    code128(
-      Taro.createCanvasContext(barcodeCanvasId),
-      barcode,
-      convert_length(400),
-      convert_length(100)
-    );
+    wxbarcode.barcode(barcodeCanvasId, barcode, 400, 100);
   });
   return (
     <>
@@ -30,9 +22,9 @@ const BarcodeRender: React.FC<{ barcode: string }> = ({ barcode }) => {
         <Canvas
           id={barcodeCanvasId}
           canvasId={barcodeCanvasId}
-          style="width:400rpx;height:100rpx;display:block;margin:0 auto"
+          style="width:400rpx;height:100rpx;margin:0 auto"
         />
-        <View>{barcode}</View>
+        <View>条码: {barcode}</View>
       </View>
     </>
   );

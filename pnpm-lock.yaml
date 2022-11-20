@@ -45,6 +45,7 @@ specifiers:
   taro-ui: ^3.1.0-beta.2
   typescript: ^4.1.0
   webpack: 5.69.0
+  wxbarcode: ^1.0.2
 
 dependencies:
   '@babel/runtime': 7.20.1
@@ -68,6 +69,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   taro-ui: 3.1.0-beta.4_9dced3f1f78cb122f0c403e3b7b7ccc2
+  wxbarcode: 1.0.2
 
 devDependencies:
   '@babel/core': 7.20.2
@@ -13308,6 +13310,10 @@ packages:
       utf-8-validate:
         optional: true
     dev: true
+
+  /wxbarcode/1.0.2:
+    resolution: {integrity: sha512-QFNva4OKNn6M3fYXLg+W+JI2FqdNeK69sSgLmxc36OPcrsDiR04If8SqGC4a6xMFHby0iiOFjIF8vsrtbXkRGA==}
+    dev: false
 
   /x-is-string/0.1.0:
     resolution: {integrity: sha512-GojqklwG8gpzOVEVki5KudKNoq7MbbjYZCbyWzEz7tyPA7eleiE0+ePwOWQQRb5fm86rD3S8Tc0tSFf3AOv50w==}
