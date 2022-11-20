@@ -1,0 +1,34 @@
+@import "../../../app";
+.main {
+  height: 2rem;
+  display: grid;
+  @rightSectionGrid: 13%;
+  grid-template-columns: @rightSectionGrid auto @rightSectionGrid;
+  align-items: center;
+  .timeRangeWrapper {
+    padding: .2rem;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    height: 80%;
+    box-shadow: -5px 7px 15px 5px rgba(0,0,0,0.23);
+  }
+  .rightWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      color: #71bf92;
+    }
+  }
+}
+
+.datePickerWrapper {
+  @radius: 3rem;
+  border-top-left-radius: @radius;
+  border-top-right-radius: @radius;
+  margin: .7rem;
+  height: 80vh;
+}

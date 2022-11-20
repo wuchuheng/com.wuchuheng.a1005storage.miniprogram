@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.8.0
   '@babel/runtime': ^7.7.7
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.5
+  '@qiun/ucharts': ^2.4.4-20221102
   '@tarojs/cli': 3.5.7
   '@tarojs/components': 3.5.7
   '@tarojs/helper': 3.5.7
@@ -39,12 +40,15 @@ specifiers:
   react-dom: ^18.0.0
   react-refresh: ^0.11.0
   stylelint: 9.3.0
+  stylelint-config-prettier: ^9.0.4
+  stylelint-prettier: ^2.0.0
   taro-ui: ^3.1.0-beta.2
   typescript: ^4.1.0
   webpack: 5.69.0
 
 dependencies:
   '@babel/runtime': 7.20.1
+  '@qiun/ucharts': 2.4.4-20221102
   '@tarojs/components': 3.5.7_@types+react@18.0.25
   '@tarojs/helper': 3.5.7
   '@tarojs/plugin-framework-react': 3.5.7_f2e842d3cef238a1a38c413baa6d3057
@@ -85,6 +89,8 @@ devDependencies:
   prettier: 2.7.1
   react-refresh: 0.11.0
   stylelint: 9.3.0
+  stylelint-config-prettier: 9.0.4_stylelint@9.3.0
+  stylelint-prettier: 2.0.0_prettier@2.7.1+stylelint@9.3.0
   typescript: 4.9.3
   webpack: 5.69.0
 
@@ -1627,6 +1633,10 @@ packages:
       source-map: 0.7.4
       webpack: 5.69.0
     dev: true
+
+  /@qiun/ucharts/2.4.4-20221102:
+    resolution: {integrity: sha512-8dTjWw87NuARyLy/KlyDUDvNqr6aHCL9W/8oMotnJeSAdV4QKlPzzJODc9XQE7cOiQHLkdi2hWoXIO19pIXotw==}
+    dev: false
 
   /@sideway/address/4.1.4:
     resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==}
@@ -12042,6 +12052,28 @@ packages:
       browserslist: 4.21.4
       postcss: 8.3.5
       postcss-selector-parser: 6.0.10
+    dev: true
+
+  /stylelint-config-prettier/9.0.4_stylelint@9.3.0:
+    resolution: {integrity: sha512-38nIGTGpFOiK5LjJ8Ma1yUgpKENxoKSOhbDNSemY7Ep0VsJoXIW9Iq/2hSt699oB9tReynfWicTAoIHiq8Rvbg==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    peerDependencies:
+      stylelint: '>=11.0.0'
+    dependencies:
+      stylelint: 9.3.0
+    dev: true
+
+  /stylelint-prettier/2.0.0_prettier@2.7.1+stylelint@9.3.0:
+    resolution: {integrity: sha512-jvT3G+9lopkeB0ARmDPszyfaOnvnIF+30QCjZxyt7E6fynI1T9mOKgYDNb9bXX17M7PXMZaX3j/26wqakjp1tw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      prettier: '>=2.0.0'
+      stylelint: '>=14.0.0'
+    dependencies:
+      prettier: 2.7.1
+      prettier-linter-helpers: 1.0.0
+      stylelint: 9.3.0
     dev: true
 
   /stylelint/9.3.0:
